@@ -47,8 +47,8 @@ function create {
 	cd $SRC
 
 	# generate cursors
-	if [[ "$THEME" =~ White$ ]]; then
-		BUILD="$SRC"/../dist-white
+	if [[ "$THEME" =~ Lotus$ ]]; then
+		BUILD="$SRC"/../dist-lotus
 	else BUILD="$SRC"/../dist
 	fi
 
@@ -100,10 +100,10 @@ function create {
 
 # generate pixmaps from svg source
 SRC=$PWD/src
-THEME="Vimix Cursors"
+THEME="Vimix Kanagawa Cursors"
 
 create svg
 
-THEME="Vimix Cursors - White"
+THEME="Vimix Kanagawa Cursors - Lotus"
 
-create svg-white
+create svg-lotus
