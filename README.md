@@ -1,18 +1,22 @@
 # Vimix Kanagawa cursors
-This is an x-cursor theme based on [Vimix-cursors](https://github.com/vinceliuice/Vimix-cursors), 
+
+![logo](logo.png)
+
+This is an x-cursor theme based on [Vimix-cursors](https://github.com/vinceliuice/Vimix-cursors),
 recoloured using the [Kanagawa colourscheme](https://github.com/rebelot/kanagawa.nvim).
 
 ## Installation
+
 To install the cursor theme simply copy the compiled theme to your icons
 directory. For local user installation:
 
-```
+```sh
 ./install.sh
 ```
 
 For system-wide installation for all users:
 
-```
+```sh
 sudo ./install.sh
 ```
 
@@ -29,11 +33,12 @@ The Windows build comes with an INF file to make installation easy.
  1. Click 'Apply'.
 
 ## Building from source
+
 You'll find everything you need to build and modify this cursor set in
 the `src/` directory. To build the xcursor theme from the SVG source
 run:
 
-```
+```sh
 ./build.sh
 ```
 
@@ -41,24 +46,32 @@ This will generate the pixmaps and appropriate aliases.
 The freshly compiled cursor theme will be located in `dist/`
 
 ### Building depends requirement
+
 - xorg-xcursorgen.
 - python-cairosvg.
 
 Fedora/RedHat distros:
 
-    dnf install xorg-xcursorgen python-cairosvg
+```sh
+dnf install xorg-xcursorgen python-cairosvg
+```
 
 Ubuntu/Mint/Debian distros:
 
-    sudo apt-get install xorg-xcursorgen python-cairosvg
+```sh
+sudo apt-get install xorg-xcursorgen python-cairosvg
+```
 
 ArchLinux/Manjaro:
 
-    pacman -S xorg-xcursorgen python-cairosvg
+```sh
+pacman -S xorg-xcursorgen python-cairosvg
+```
 
 Other:
 Search for the engines in your distributions repository or install the depends from source.
 
 ## Preview
+
 ![Vimix-kanagawa](preview.png)
-![Vimix-kanagawa-lotus](preview-white.png)
+![Vimix-kanagawa-lotus](preview-lotus.png)
