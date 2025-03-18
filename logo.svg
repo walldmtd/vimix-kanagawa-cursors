@@ -40,12 +40,12 @@
      id="namedview1271"
      showgrid="false"
      inkscape:zoom="0.5036368"
-     inkscape:cx="2173.1931"
-     inkscape:cy="-336.55205"
+     inkscape:cx="1746.2981"
+     inkscape:cy="155.86629"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g275"
+     inkscape:current-layer="svg1269"
      inkscape:showpageshadow="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050" />
@@ -1752,7 +1752,10 @@
   <g
      id="logo"
      transform="translate(-59.709161,-28.178015)"
-     style="display:inline">
+     style="display:inline"
+     inkscape:export-filename="logo.png"
+     inkscape:export-xdpi="38.401154"
+     inkscape:export-ydpi="38.401154">
     <rect
        id="rect1036"
        style="display:inline;fill:#2a2a37;fill-opacity:1;paint-order:stroke fill markers"
@@ -2365,7 +2368,10 @@
   </g>
   <g
      id="preview"
-     style="display:inline">
+     style="display:inline"
+     inkscape:export-filename="preview.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
     <path
        inkscape:connector-curvature="0"
        id="path139"
@@ -4717,7 +4723,11 @@
   </g>
   <g
      transform="matrix(1.0000173,0,0,1.0000173,711.80098,-80.896524)"
-     id="preview-white">
+     id="preview-white"
+     inkscape:label="preview-lotus"
+     inkscape:export-filename="preview-lotus.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
     <path
        inkscape:connector-curvature="0"
        id="path139-0"
