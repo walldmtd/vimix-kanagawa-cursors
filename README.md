@@ -7,6 +7,12 @@ recoloured using the [Kanagawa colourscheme](https://github.com/rebelot/kanagawa
 
 ## Installation
 
+### Arch Linux
+
+Install ```vimix-kanagawa-cursors``` from the AUR.
+
+### Other distros
+
 To install the cursor theme simply copy the compiled theme to your icons
 directory. For local user installation:
 
