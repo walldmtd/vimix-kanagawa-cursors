@@ -62,8 +62,10 @@ function create {
 		mkdir -p "$OUTPUT"
 	fi
 
+	cd $SRC/xcursor
+
 	echo -ne "Generating cursor theme...\\r"
-	for CUR in xcursor/config/*.cursor; do
+	for CUR in config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
 		BASENAME="${BASENAME%.*}"
