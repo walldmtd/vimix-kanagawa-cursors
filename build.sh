@@ -36,34 +36,34 @@ if [ ! "$(which cairosvg 2> /dev/null)" ]; then
 fi
 
 function create {
-	cd "$SRC"
+	cd "$SRC/x-cursor"
 	mkdir -p x1 x1_25 x1_5 x2
-	cd "$SRC"/$1
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 32" && cairosvg -f png -o "../x1/${0%.svg}.png" --output-width 32 --output-height 32 $0' {} \;
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 40" && cairosvg -f png -o "../x1_25/${0%.svg}.png" --output-width 40 --output-height 40 $0' {} \;
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 48" && cairosvg -f png -o "../x1_5/${0%.svg}.png" --output-width 48 --output-height 48 $0' {} \;
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 64" && cairosvg -f png -o "../x2/${0%.svg}.png" --output-width 64 --output-height 64 $0' {} \;
+	cd "$SRC"/svg/$1
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 32" && cairosvg -f png -o "../../x-cursor/x1/${0%.svg}.png" --output-width 32 --output-height 32 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 40" && cairosvg -f png -o "../../x-cursor/x1_25/${0%.svg}.png" --output-width 40 --output-height 40 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 48" && cairosvg -f png -o "../../x-cursor/x1_5/${0%.svg}.png" --output-width 48 --output-height 48 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 64" && cairosvg -f png -o "../../x-cursor/x2/${0%.svg}.png" --output-width 64 --output-height 64 $0' {} \;
 
 	cd $SRC
 
 	# generate cursors
 	if [[ "$THEME" =~ Lotus$ ]]; then
-		BUILD="$SRC"/../dist-lotus
-	else BUILD="$SRC"/../dist
+		BUILD="$SRC"/../x-cursor/vimix-kanagawa-cursors-lotus
+	else BUILD="$SRC"/../x-cursor/vimix-kanagawa-cursors-wave
 	fi
 
 	OUTPUT="$BUILD"/cursors
-	ALIASES="$SRC"/cursorList
+	ALIASES="$SRC"/x-cursor/cursorList
 
 	if [ ! -d "$BUILD" ]; then
-		mkdir "$BUILD"
+		mkdir -p "$BUILD"
 	fi
 	if [ ! -d "$OUTPUT" ]; then
-		mkdir "$OUTPUT"
+		mkdir -p "$OUTPUT"
 	fi
 
 	echo -ne "Generating cursor theme...\\r"
-	for CUR in config/*.cursor; do
+	for CUR in x-cursor/config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
 		BASENAME="${BASENAME%.*}"
@@ -100,10 +100,10 @@ function create {
 
 # generate pixmaps from svg source
 SRC=$PWD/src
-THEME="Vimix Kanagawa Cursors"
+THEME="Vimix Kanagawa Cursors - Wave"
 
-create svg
+create wave
 
 THEME="Vimix Kanagawa Cursors - Lotus"
 
-create svg-lotus
+create lotus

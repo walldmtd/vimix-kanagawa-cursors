@@ -1,6 +1,6 @@
 # Vimix Kanagawa cursors
 
-![Logo](logo.png)
+![Logo](assets/logo.png)
 
 This is an x-cursor theme based on [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors),
 recoloured using the [Kanagawa colourscheme](https://github.com/rebelot/kanagawa.nvim).
@@ -79,5 +79,5 @@ Search for the engines in your distributions repository or install the depends f
 
 ## Preview
 
-![Vimix Kanagawa cursors preview](preview.png)
-![Vimix Kanagawa Lotus cursors preview](preview-lotus.png)
+![Vimix Kanagawa cursors preview](assets/preview.png)
+![Vimix Kanagawa Lotus cursors preview](assets/preview-lotus.png)

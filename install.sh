@@ -11,16 +11,16 @@ else
   mkdir -p $DEST_DIR
 fi
 
-if [ -d "$DEST_DIR/vimix-kanagawa-cursors" ]; then
-  rm -rf "$DEST_DIR/vimix-kanagawa-cursors"
+if [ -d "$DEST_DIR/vimix-kanagawa-cursors-wave" ]; then
+  rm -rf "$DEST_DIR/vimix-kanagawa-cursors-wave"
 fi
 
-if [ -d "$DEST_DIR/vimix-kanagawa-lotus-cursors" ]; then
-  rm -rf "$DEST_DIR/vimix-kanagawa-lotus-cursors"
+if [ -d "$DEST_DIR/vimix-kanagawa-cursors-lotus" ]; then
+  rm -rf "$DEST_DIR/vimix-kanagawa-cursors-lotus"
 fi
 
-cp -r dist/ $DEST_DIR/vimix-kanagawa-cursors
-cp -r dist-lotus/ $DEST_DIR/vimix-kanagawa-lotus-cursors
+cp -r x-cursor/vimix-kanagawa-cursors-wave $DEST_DIR/vimix-kanagawa-cursors-wave
+cp -r x-cursor/vimix-kanagawa-cursors-lotus $DEST_DIR/vimix-kanagawa-cursors-lotus
 
 echo "Finished..."
 
