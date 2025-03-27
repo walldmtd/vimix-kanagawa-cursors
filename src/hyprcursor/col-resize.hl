@@ -1,0 +1,8 @@
+resize_algorithm = bilinear
+
+hotspot_x = 0.5
+hotspot_y = 0.5
+
+define_override = split_h
+
+define_size = , col-resize.svg

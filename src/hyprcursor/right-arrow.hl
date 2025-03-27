@@ -1,0 +1,8 @@
+resize_algorithm = bilinear
+
+hotspot_x = 0.875
+hotspot_y = 0.5
+
+define_override = right_side
+
+define_size = , right-arrow.svg

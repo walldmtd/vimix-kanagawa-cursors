@@ -1,0 +1,6 @@
+resize_algorithm = bilinear
+
+hotspot_x = 0.125
+hotspot_y = 0.90625
+
+define_size = , draft.svg

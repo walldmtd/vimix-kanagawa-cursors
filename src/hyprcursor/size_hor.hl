@@ -1,0 +1,12 @@
+resize_algorithm = bilinear
+
+hotspot_x = 0.5
+hotspot_y = 0.5
+
+define_override = col-resize
+define_override = e-resize
+define_override = h_double_arrow
+define_override = sb_h_double_arrow
+define_override = w-resize
+
+define_size = , size_hor.svg
