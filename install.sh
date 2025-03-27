@@ -19,8 +19,8 @@ if [ -d "$DEST_DIR/vimix-kanagawa-cursors-lotus" ]; then
   rm -rf "$DEST_DIR/vimix-kanagawa-cursors-lotus"
 fi
 
-cp -r x-cursor/vimix-kanagawa-cursors-wave $DEST_DIR/vimix-kanagawa-cursors-wave
-cp -r x-cursor/vimix-kanagawa-cursors-lotus $DEST_DIR/vimix-kanagawa-cursors-lotus
+cp -r xcursor/vimix-kanagawa-cursors-wave $DEST_DIR/vimix-kanagawa-cursors-wave
+cp -r xcursor/vimix-kanagawa-cursors-lotus $DEST_DIR/vimix-kanagawa-cursors-lotus
 
 echo "Finished..."
 

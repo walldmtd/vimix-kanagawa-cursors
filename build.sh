@@ -21,7 +21,7 @@ if [ ! "$(which xcursorgen 2> /dev/null)" ]; then
 fi
 
 if [ ! "$(which cairosvg 2> /dev/null)" ]; then
-  echo xorg-xcursorgen needs to be installed to generate png files.
+  echo cairosvg needs to be installed to generate png files.
   if has_command zypper; then
     sudo zypper in python-cairosvg
   elif has_command apt; then
@@ -36,24 +36,24 @@ if [ ! "$(which cairosvg 2> /dev/null)" ]; then
 fi
 
 function create {
-	cd "$SRC/x-cursor"
+	cd "$SRC/xcursor"
 	mkdir -p x1 x1_25 x1_5 x2
 	cd "$SRC"/svg/$1
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 32" && cairosvg -f png -o "../../x-cursor/x1/${0%.svg}.png" --output-width 32 --output-height 32 $0' {} \;
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 40" && cairosvg -f png -o "../../x-cursor/x1_25/${0%.svg}.png" --output-width 40 --output-height 40 $0' {} \;
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 48" && cairosvg -f png -o "../../x-cursor/x1_5/${0%.svg}.png" --output-width 48 --output-height 48 $0' {} \;
-	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 64" && cairosvg -f png -o "../../x-cursor/x2/${0%.svg}.png" --output-width 64 --output-height 64 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 32" && cairosvg -f png -o "../../xcursor/x1/${0%.svg}.png" --output-width 32 --output-height 32 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 40" && cairosvg -f png -o "../../xcursor/x1_25/${0%.svg}.png" --output-width 40 --output-height 40 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 48" && cairosvg -f png -o "../../xcursor/x1_5/${0%.svg}.png" --output-width 48 --output-height 48 $0' {} \;
+	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 64" && cairosvg -f png -o "../../xcursor/x2/${0%.svg}.png" --output-width 64 --output-height 64 $0' {} \;
 
 	cd $SRC
 
 	# generate cursors
 	if [[ "$THEME" =~ Lotus$ ]]; then
-		BUILD="$SRC"/../x-cursor/vimix-kanagawa-cursors-lotus
-	else BUILD="$SRC"/../x-cursor/vimix-kanagawa-cursors-wave
+		BUILD="$SRC"/../xcursor/vimix-kanagawa-cursors-lotus
+	else BUILD="$SRC"/../xcursor/vimix-kanagawa-cursors-wave
 	fi
 
 	OUTPUT="$BUILD"/cursors
-	ALIASES="$SRC"/x-cursor/cursorList
+	ALIASES="$SRC"/xcursor/cursorList
 
 	if [ ! -d "$BUILD" ]; then
 		mkdir -p "$BUILD"
@@ -63,7 +63,7 @@ function create {
 	fi
 
 	echo -ne "Generating cursor theme...\\r"
-	for CUR in x-cursor/config/*.cursor; do
+	for CUR in xcursor/config/*.cursor; do
 		BASENAME="$CUR"
 		BASENAME="${BASENAME##*/}"
 		BASENAME="${BASENAME%.*}"
