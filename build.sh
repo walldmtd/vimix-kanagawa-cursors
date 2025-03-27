@@ -36,7 +36,7 @@ if [ ! "$(which cairosvg 2> /dev/null)" ]; then
 fi
 
 function create {
-	cd "$SRC/xcursor"
+	cd "$SRC"/xcursor
 	mkdir -p x1 x1_25 x1_5 x2
 	cd "$SRC"/svg/$1
 	find . -name "*.svg" -type f -exec sh -c 'echo -e "generating ${0%.svg}.png 32" && cairosvg -f png -o "../../xcursor/x1/${0%.svg}.png" --output-width 32 --output-height 32 $0' {} \;
@@ -98,6 +98,11 @@ function create {
 	echo -e "Generating Theme Index... DONE"
 }
 
+function cleanup {
+	cd "$SRC"/xcursor
+	rm -rf x1 x1_25 x1_5 x2
+}
+
 # generate pixmaps from svg source
 SRC=$PWD/src
 THEME="Vimix Kanagawa Cursors - Wave"
@@ -107,3 +112,5 @@ create wave
 THEME="Vimix Kanagawa Cursors - Lotus"
 
 create lotus
+
+cleanup
