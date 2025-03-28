@@ -7,54 +7,74 @@ recoloured using the [Kanagawa colourscheme](https://github.com/rebelot/kanagawa
 
 ## Installation
 
-### Arch Linux
+### Arch-based distros
 
-Install ```vimix-kanagawa-cursors``` from the AUR.
+The XCursor theme can be installed with `vimix-kanagawa-cursors` from the AUR.
+
+The Hyprcursor theme can be installed with `vimix-kanagawa-hyprcursors` from the AUR.
+
+Or, you can follow the instructions for [other distros](#other-distros).
 
 ### Other distros
 
-To install the cursor theme simply copy the compiled theme to your icons
-directory. For local user installation:
+To install the cursor theme simply copy the compiled theme to your icons directory.
+For local user installation:
 
 ```sh
-./install.sh
+./install.sh <xcursor|hyprcursor|all>
 ```
 
-For system-wide installation for all users:
+Use `xcursor` to install xcursors only, `hyprcursor` to install hyprcursors only, or `all` for both.
+
+XCursors can be installed system-wide for all users with `sudo`:
 
 ```sh
-sudo ./install.sh
+sudo ./install.sh xcursor
 ```
 
-Then set the theme with your preferred desktop tools.
+__Hyprcursors should not be installed system-wide due to potential permission issues.__
 
-### Windows
+Once the cursors are installed, set the theme with your preferred desktop tools.
 
-The Windows build comes with an INF file to make installation easy.
+## Windows cursor installation
 
- 1. Open `windows/` folder in Explorer, and right click on `install.inf`.
- 1. Click 'Install' from the context menu, and authorise the modifications to your system.
- 1. Press the `Windows Key and R` at the same time and type `main.cpl` in the run promt and press `Ok`.
- 1. Go to `Pointers` and select `Vimix Kanagawa Cursors` under the Scheme category.
- 1. Click 'Apply'.
+(WIP)
+
+~~The Windows build comes with an INF file to make installation easy.~~
+
+ 1. ~~Open `windows/` folder in Explorer, and right click on `install.inf`.~~
+ 1. ~~Click 'Install' from the context menu, and authorise the modifications to your system.~~
+ 1. ~~Press the `Windows Key and R` at the same time and type `main.cpl` in the run promt and press `Ok`.~~
+ 1. ~~Go to `Pointers` and select `Vimix Kanagawa Cursors` under the Scheme category.~~
+ 1. ~~Click 'Apply'.~~
 
 ## Building from source
 
 You'll find everything you need to build and modify this cursor set in
-the `src/` directory. To build the xcursor theme from the SVG source
-run:
+the `src/` directory.
+
+To build the xcursor theme from the SVG source run:
 
 ```sh
-./build.sh
+./build-xcursor.sh
 ```
 
 This will generate the pixmaps and appropriate aliases.
 The freshly compiled cursor themes will be located in `xcursor/`
 
-### Building depends requirement
+To build the hyprcursor theme from the SVG source run:
 
-- xorg-xcursorgen.
-- python-cairosvg.
+```sh
+./build-hyprcursor.sh
+```
+
+This will generate the SVG cursors as .hlc files and the manifest files.
+The freshly compiled cursor themes will be located in `hyprcursor/`
+
+### XCursor build dependencies
+
+- `xorg-xcursorgen`
+- `python-cairosvg`
 
 Fedora/RedHat distros:
 
@@ -72,6 +92,31 @@ ArchLinux/Manjaro:
 
 ```sh
 pacman -S xorg-xcursorgen python-cairosvg
+```
+
+Other:
+Search for the engines in your distributions repository or install the depends from source.
+
+### Hyprcursor build dependencies
+
+- `hyprcursor`
+
+Fedora/RedHat distros:
+
+```sh
+dnf install hyprcursor
+```
+
+Ubuntu/Mint/Debian distros:
+
+```sh
+sudo apt-get install hyprcursor
+```
+
+ArchLinux/Manjaro:
+
+```sh
+pacman -S hyprcursor
 ```
 
 Other:
