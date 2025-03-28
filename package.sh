@@ -24,3 +24,10 @@ if [ -d "hyprcursor" ]; then
     done
     cd ..
 fi
+
+# Write b2sums for all archives
+cd package
+touch b2sums
+for archive in *.tar.gz; do
+    echo $(b2sum $archive) >> b2sums
+done
