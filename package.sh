@@ -15,3 +15,12 @@ if [ -d "xcursor" ]; then
     done
     cd ..
 fi
+
+# Package hyprcursors
+if [ -d "hyprcursor" ]; then
+    cd hyprcursor
+    for theme in *; do
+        tar -czf ../package/"$theme".tar.gz "$theme"
+    done
+    cd ..
+fi
