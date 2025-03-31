@@ -124,5 +124,5 @@ Search for the engines in your distributions repository or install the depends f
 
 ## Preview
 
-![Vimix Kanagawa cursors preview](assets/preview.png)
+![Vimix Kanagawa cursors preview](assets/preview-wave.png)
 ![Vimix Kanagawa Lotus cursors preview](assets/preview-lotus.png)
