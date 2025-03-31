@@ -3,7 +3,4 @@ resize_algorithm = bilinear
 hotspot_x = 0.8125
 hotspot_y = 0.125
 
-define_override = ne-resize
-define_override = ur_angle
-
 define_size = , top_right_corner.svg

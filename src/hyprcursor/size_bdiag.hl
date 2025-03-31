@@ -3,6 +3,10 @@ resize_algorithm = bilinear
 hotspot_x = 0.5
 hotspot_y = 0.5
 
+define_override = ll_angle
+define_override = ne-resize
 define_override = nesw-resize
+define_override = sw-resize
+define_override = ur_angle
 
 define_size = , size_bdiag.svg

@@ -3,7 +3,4 @@ resize_algorithm = bilinear
 hotspot_x = 0.8125
 hotspot_y = 0.8125
 
-define_override = lr_angle
-define_override = se-resize
-
 define_size = , bottom_right_corner.svg
