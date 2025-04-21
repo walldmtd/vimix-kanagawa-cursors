@@ -5,4 +5,11 @@ src/xcursor/x2
 
 src/hyprcursor/temp
 
+src/windows/32
+src/windows/48
+src/windows/64
+src/windows/96
+src/windows/128
+src/windows/ico
+
 package

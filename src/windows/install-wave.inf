@@ -1,5 +1,5 @@
-; Vimix cursors
-; Right click on the file "install.inf" and select "Install". Then apply Vimix cursors in Control Panel > Appearance and Personalization > Personalization > Change mouse pointers.
+; Vimix Kanagawa Cursors - Wave
+; Right click on the file "install.inf" and select "Install". Then apply "Vimix Kanagawa Cursors - Wave" in Control Panel > Appearance and Personalization > Personalization > Change mouse pointers.
 
 [Version]
 signature="$CHICAGO$"
@@ -36,8 +36,8 @@ unavailable.cur
 alt-select.cur
 
 [Strings]
-CUR_DIR       = "Cursors\Vimix Cursors"
-SCHEME_NAME   = "Vimix Cursors"
+CUR_DIR       = "Cursors\Vimix Kanagawa Cursors - Wave"
+SCHEME_NAME   = "Vimix Kanagawa Cursors - Wave"
 pointer       = "normal-select.cur"
 help          = "help-select.cur"
 work          = "working-in-background.ani"

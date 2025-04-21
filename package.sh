@@ -25,6 +25,15 @@ if [ -d "hyprcursor" ]; then
     cd ..
 fi
 
+# Package windows cursors
+if [ -d "windows" ]; then
+    cd windows
+    for theme in *; do
+        tar -czf ../package/"$theme".tar.gz "$theme"
+    done
+    cd ..
+fi
+
 # Write b2sums for all archives
 cd package
 touch b2sums
