@@ -38,15 +38,13 @@ Once the cursors are installed, set the theme with your preferred desktop tools.
 
 ## Windows cursor installation
 
-(WIP)
+The Windows build comes with INF files to make installation easy.
 
-~~The Windows build comes with an INF file to make installation easy.~~
-
- 1. ~~Open `windows/` folder in Explorer, and right click on `install.inf`.~~
- 1. ~~Click 'Install' from the context menu, and authorise the modifications to your system.~~
- 1. ~~Press the `Windows Key and R` at the same time and type `main.cpl` in the run promt and press `Ok`.~~
- 1. ~~Go to `Pointers` and select `Vimix Kanagawa Cursors` under the Scheme category.~~
- 1. ~~Click 'Apply'.~~
+ 1. Open `windows/` folder in Explorer, open a theme folder, and right click on `install.inf`.
+ 1. Click 'Install' from the context menu, and authorise the modifications to your system.
+ 1. Press the `Windows Key and R` at the same time and type `main.cpl` in the run promt and press `Ok`.
+ 1. Go to `Pointers` and select `Vimix Kanagawa Cursors` under the Scheme category.
+ 1. Click 'Apply'.
 
 ## Building from source
 
@@ -70,6 +68,14 @@ To build the hyprcursor theme from the SVG source run:
 
 This will generate the SVG cursors as .hlc files and the manifest files.
 The freshly compiled cursor themes will be located in `hyprcursor/`
+
+To build the windows cursor theme from the SVG source run:
+
+```sh
+./build-windows.sh
+```
+
+This will generate the png files, convert them to .ico files, and then build them into .cur and .ani files. The freshly compiled cursor themes will be located in `windows/`
 
 ### XCursor build dependencies
 
@@ -117,6 +123,33 @@ ArchLinux/Manjaro:
 
 ```sh
 pacman -S hyprcursor
+```
+
+Other:
+Search for the engines in your distributions repository or install the depends from source.
+
+### Windows cursor build dependencies
+
+- `python-cairosvg`
+- `imagemagick`
+- `python`
+
+Fedora/RedHat distros:
+
+```sh
+dnf install python-cairosvg imagemagick python3
+```
+
+Ubuntu/Mint/Debian distros:
+
+```sh
+sudo apt-get install python-cairosvg imagemagick python3
+```
+
+ArchLinux/Manjaro:
+
+```sh
+pacman -S  python-cairosvg imagemagick python
 ```
 
 Other:
