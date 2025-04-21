@@ -29,7 +29,7 @@ fi
 if [ -d "windows" ]; then
     cd windows
     for theme in *; do
-        tar -czf ../package/"$theme".tar.gz "$theme"
+        zip -qr ../package/"$theme".zip "$theme"
     done
     cd ..
 fi
