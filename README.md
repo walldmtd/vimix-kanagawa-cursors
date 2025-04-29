@@ -2,7 +2,7 @@
 
 ![Logo](assets/logo.png)
 
-This is an x-cursor theme based on [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors),
+This is an x-cursor, hyprcursor, and Windows cursor theme based on [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors),
 recoloured using the [Kanagawa colourscheme](https://github.com/rebelot/kanagawa.nvim).
 
 ## Installation
